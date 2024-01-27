@@ -94,3 +94,63 @@ input[type="checkbox"] {
   border: none;
   cursor: pointer;
 }
+
+.enter:hover {
+  background-color: #e12828d8;
+}
+
+.material-symbols-outlined {
+  /* color: #6c727f; */
+  font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 24;
+}
+
+.psw-eye {
+  position: absolute;
+  color: #6c727f;
+  margin: 12px -34px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.psw-eye:hover {
+  color: black;
+}
+
+select {
+  appearance: none;
+}
+
+.country-arrow {
+  position: absolute;
+  color: #6c727f;
+  border: none;
+  background: none;
+  margin: 12px -34px;
+  pointer-events: none;
+}
+
+select option {
+  color: black;
+}
+select:invalid {
+  color: gray;
+}
+
+select:hover,
+.country:hover .country-arrow {
+  color: black;
+}
+
+.asterisk {
+  color: red;
+}
+
+input:valid {
+  outline-color: green;
+}
+
+input:not(:placeholder-shown):invalid {
+  outline-color: red;
+}
