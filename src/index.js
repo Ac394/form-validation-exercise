@@ -4,7 +4,8 @@ const email = document.querySelector("#e-mail");
 const zip = document.querySelector("#zip");
 const password = document.querySelector("#psw");
 const passwordConfirm = document.querySelector("#psw-conf");
-const showPassBtn = document.querySelector("#psw-eye");
+const showPassBtn = document.querySelector(".psw-eye");
+const eyeIcn = document.querySelector("#eye-icon");
 
 const constraints = {
   nameValidation: [
@@ -42,6 +43,16 @@ const checkValidity = (input, validation) => {
   }
 };
 
+const showPass = () => {
+  if (password.type === "password") {
+    eyeIcn.textContent = "visibility";
+    password.type = "text";
+  } else {
+    password.type = "password";
+    eyeIcn.textContent = "visibility_off";
+  }
+};
+
 firstName.addEventListener("input", () =>
   checkValidity(firstName, constraints.nameValidation)
 );
@@ -66,4 +77,4 @@ passwordConfirm.addEventListener("input", () =>
   checkPassConfirm(passwordConfirm)
 );
 
-showPassBtn.addEventListener("click");
+showPassBtn.addEventListener("click", showPass);
